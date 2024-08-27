@@ -3,36 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quizizz Embed</title>
+  <title>Full-Screen Quizizz Embed</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+    body {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      background-color: #f0f0f0;
     }
-    .quiz-container {
+    .full-screen-container {
       width: 100%;
-      max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      min-height: 635px;
+      height: 100%;
     }
     iframe {
-      flex: 1;
-      border: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    a:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <div class="quiz-container">
-    <iframe src="https://quizizz.com/embed/quiz/66cc2e967b4cc9b2fbc7831a" title="Easy - Quizizz" allowfullscreen></iframe>
-    <a href="https://quizizz.com/admin?source=embedFrame" target="_blank">Explore more at Quizizz.</a>
+  <div class="full-screen-container">
+    <iframe src="https://quizizz.com/embed/quiz/66cc2e967b4cc9b2fbc7831a" title="Full Screen Quizizz" allowfullscreen></iframe>
   </div>
+  <a href="https://quizizz.com/admin?source=embedFrame" target="_blank">Explore more at Quizizz</a>
 </body>
 </html>
